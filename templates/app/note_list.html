@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="author" content="Liang Sun <i@liangsun.org>">
+        <link href="/static/css/sticky.css" rel="stylesheet" media="screen">
+        <script src="/static/js/jquery_183.js"></script>
+        <script src="/static/js/sticky.js"></script>
+    </head>
+    <body>
+        <div class="board">
+            <div class="rim">
+                <div class="left top_left">
+                </div>
+                <div class="left top_center">
+                </div>
+                <div class="left top_right">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="rim_center">
+                <div class="left left_center"></div>
+                <div class="left center_center">
+                    <div class="cholk_title">
+                        发邮件到 t@tiezhangzhi.com,
+                        我会把你的信息贴到墙上。
+                    </div>
+                    {% for obj in object_list %}
+                    {% include "app/note_detail.html" with obj=obj %}
+                    {% endfor %}
+                    <div class="clear"></div>
+                </div>
+                <div class="left right_center"></div>
+                <div class="clear"></div>
+            </div>
+            <div class="rim">
+                <div class="left bottom_left">
+                </div>
+                <div class="left bottom_center">
+                </div>
+                <div class="left bottom_right">
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </body>
+</html>
