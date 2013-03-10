@@ -4,11 +4,10 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
-from django.views.generic import ListView
-
 from app.models import *
+from app.views import *
 
 urlpatterns = patterns('',
-    url(r'^$', ListView.as_view(model=Note), name='list_note'),
+    url(r'^$', NoteListView.as_view(), name='list_note'),
     url(r'^admin/', include(admin.site.urls)),
 )
