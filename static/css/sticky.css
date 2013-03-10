@@ -88,6 +88,7 @@ html,body{
     height:139px;
     padding:7px;
     background:url('/static/img/sticky_top.png') left top repeat-y;
+    font-size:14px;
 }
 .note_bottom{
     width:120px;
